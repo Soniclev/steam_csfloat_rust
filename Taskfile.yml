@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  cargo fmt:
+    cmd: cargo fmt
+
+  clippy:
+    cmds:
+      - cargo clippy
+    silent: false
+
+  clippy fix:
+    cmd: cargo clippy --fix
+
+  cargo fmt + clippy:
+    deps:
+      - cargo fmt
+      - clippy
+
+  cargo test:
+    cmd: cargo test -- --nocapture

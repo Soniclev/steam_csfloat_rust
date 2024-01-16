@@ -1,0 +1,4 @@
+# https://nnethercote.github.io/perf-book/build-configuration.html
+
+# [build]
+# rustflags = ["-C", "target-cpu=native"]

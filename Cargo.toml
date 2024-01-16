@@ -1,0 +1,25 @@
+[package]
+name = "steam_csfloat_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4.31", features = ["serde"] }
+sqlx = { version = "0.7", features = [ "runtime-async-std", "postgres", "chrono" ] }
+dotenvy = "0.15"
+regex = "1.10.2"
+circular-buffer = "0.1.6"
+teloxide = { version = "0.12", features = ["macros"] }
+lazy_static = "1.4.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
+
+[dev-dependencies]
+mockall = "0.12.1"
